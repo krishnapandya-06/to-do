@@ -1,0 +1,273 @@
+/* * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ font-family: 'Arial', sans-serif;
+ background: #1e1e1e;
+ color: white;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: linear-gradient(145deg, #141414, #3a3a3a);
+}
+
+.todo-app {
+ background: rgba(255, 255, 255, 0.1); 
+ border-radius: 20px;
+ padding: 30px;
+ max-width: 400px;
+ width: 100%;
+ box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+ backdrop-filter: blur(10px); 
+ -webkit-backdrop-filter: blur(10px);
+ border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+ font-size: 2rem;
+ text-align: center;
+ margin-bottom: 20px;
+ color: #fff;
+ text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"] {
+ width: 100%;
+ padding: 10px;
+ margin-bottom: 10px;
+ border-radius: 10px;
+ border: none;
+ background: rgba(255, 255, 255, 0.2);
+ color: white;
+ font-size: 1rem;
+ outline: none;
+}
+
+input[type="text"]::placeholder {
+ color: #ccc;
+}
+
+button {
+ width: 100%;
+ padding: 10px;
+ border-radius: 10px;
+ border: none;
+ background-color: #4caf50;
+ color: white;
+ font-size: 1rem;
+ cursor: pointer;
+ transition: background-color 0.3s;
+}
+
+button:hover {
+ background-color: #45a049;
+}
+
+.todo-list {
+ list-style-type: none;
+ padding: 0;
+ margin-top: 20px;
+}
+
+.todo-list li {
+ background: rgba(255, 255, 255, 0.2);
+ padding: 15px;
+ border-radius: 10px;
+ margin-bottom: 10px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.todo-list li span {
+ color: #fff;
+ font-size: 1rem;
+}
+
+.todo-list li.Completed span {
+ text-decoration: line-through;
+ color: #bbb;
+}
+
+.todo-list button {
+ padding: 5px 10px;
+ margin-left: 10px;
+ background-color: #ff4c4c;
+ border-radius: 8px;
+}
+
+.todo-list button:hover {
+ background-color: #e60000;
+}
+.todo-list button:first-of-type {
+ background-color: #4caf50;
+}
+
+.todo-list button:first-of-type:hover {
+ background-color: #45a049;
+} */
+/* Reset some default styling */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ font-family: 'Poppins', sans-serif; 
+ text-transform: capitalize !important;
+ background: #121212;
+ color: white;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: radial-gradient(circle, #0f0f0f, #1a1a1a);
+}
+
+.todo-app {
+ background: rgba(255, 255, 255, 0.1); 
+ border-radius: 20px;
+ padding: 30px;
+ max-width: 450px;
+ width: 100%;
+ box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+ backdrop-filter: blur(20px); /* Stronger frosted glass effect */
+ -webkit-backdrop-filter: blur(20px);
+ border: 1px solid rgba(255, 255, 255, 0.2);
+ transition: transform 0.3s ease;
+}
+
+.todo-app:hover {
+ transform: scale(1.02); /* Subtle hover effect */
+}
+
+h1 {
+ font-size: 2.5rem;
+ text-align: center;
+ margin-bottom: 20px;
+ color: #fff;
+ text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+ font-weight: 700;
+ letter-spacing: 2px;
+ transition: color 0.3s ease;
+}
+
+h1:hover {
+ color: #f39c12; 
+}
+
+input[type="text"] {
+ width: 100%;
+ padding: 15px;
+ margin-bottom: 15px;
+ border-radius: 12px;
+ border: none;
+ background: rgba(255, 255, 255, 0.2);
+ color: white;
+ text-transform: capitalize;
+ font-size: 1.1rem;
+ outline: none;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+ transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+ background: rgba(255, 255, 255, 0.3); 
+}
+
+input[type="text"]::placeholder {
+ color: #ccc;
+}
+
+button {
+ width: 100%;
+ padding: 12px;
+ border-radius: 12px;
+ border: none;
+ background-color: #ed5c4c;
+ color: white;
+ font-size: 1.1rem;
+ cursor: pointer;
+ margin-bottom: 5px;
+ transition: background-color 0.3s ease, transform 0.2s;
+ box-shadow: 0 4px 20px rgba(231, 76, 60, 0.3);
+}
+
+button:hover {
+ background-color: #c0392b;
+ transform: translateY(-2px); 
+}
+
+.todo-list {
+ list-style-type: none;
+ padding: 0;
+ margin-top: 25px;
+}
+
+.todo-list li {
+ background: rgba(255, 255, 255, 0.15);
+ padding: 15px;
+ border-radius: 10px;
+ margin-bottom: 15px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+ transition: transform 0.3s ease;
+}
+
+.todo-list li:hover {
+ transform: translateY(-3px);
+}
+
+.todo-list li span {
+ color: #fff;
+ font-size: 1rem;
+}
+
+.todo-list li.Completed span {
+ text-decoration: line-through;
+ color: #aaa;
+}
+
+.todo-list button {
+ padding: 8px 14px;
+ margin-left: 10px;
+ background-color: #2980b9;
+ border-radius: 10px;
+ border: none;
+ cursor: pointer;
+ font-size: 0.9rem;
+ transition: background-color 0.3s ease;
+}
+
+.todo-list button:first-of-type {
+ background-color: #27ae60;
+}
+
+.todo-list button:first-of-type:hover {
+ background-color: #229954;
+}
+
+.todo-list button:hover {
+ background-color: #1abc9c;
+}
+
+@media (max-width: 768px) {
+ .todo-app {
+   max-width: 90%;
+ }
+
+ h1 {
+   font-size: 2rem;
+ }
+
+ button {
+   font-size: 1rem;
+ }
+}
